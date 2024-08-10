@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Baloo+Bhai+2:wght@400..800&family=Cutive&family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Quicksand:wght@500&family=Roboto+Slab:wght@100..900&family=Sedan+SC&family=Tilt+Neon&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Baloo Bhai 2", sans-serif;
+  transition: all 0.3s ease; /* Add transition for all elements */
+}
+
+.login {
+  position: absolute;
+  width: 100%;
+  min-height: 440px;
+  top: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: width 0.3s ease, min-height 0.3s ease, top 0.3s ease; /* Add transitions for width, min-height, and top */
+}
+
+.login .container {
+  width: 60%;
+  min-height: 61vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  transition: width 0.3s ease, min-height 0.3s ease, gap 0.3s ease; /* Add transitions for width, min-height, and gap */
+}
+
+.login .container .imgContainer img {
+  height: 150px;
+  transition: height 0.3s ease; /* Add transition for height */
+}
+
+.container .formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: gap 0.3s ease; /* Add transition for gap */
+}
+
+.container .formContainer .credential,
+.container .formContainer .password {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 25px;
+  font-weight: 500;
+  transition: width 0.3s ease, gap 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease; /* Add transitions for width, gap, font-size, and font-weight */
+}
+
+.container .formContainer .credential input,
+.container .formContainer .password input {
+  font-size: 13px;
+  background-color: transparent;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 5px;
+  transition: font-size 0.3s ease, border-radius 0.3s ease, padding 0.3s ease; /* Add transitions for font-size, border-radius, and padding */
+}
+
+.password-input {
+  position: relative;
+  transition: position 0.3s ease; /* Add transition for position */
+}
+
+.password-input input {
+  padding-right: 40px; /* Adjust this value based on the button size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: padding-right 0.3s ease; /* Add transition for padding-right */
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust this value based on your preference */
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: top 0.3s ease, right 0.3s ease, transform 0.3s ease; /* Add transitions for top, right, and transform */
+}
+
+.submitButton {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  gap: 10px;
+  transition: width 0.3s ease, min-height 0.3s ease, gap 0.3s ease; /* Add transitions for width, min-height, and gap */
+}
+
+.submitButton .btn {
+  width: 100px;
+  height: 40px;
+  font-size: 25px;
+  font-weight: 550;
+  border-radius: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  color: #fff;
+  background-image: linear-gradient(to left, #329Ba5 0%, #293273 51%, #0D2530 100%);
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+
+.submitButton .btn:hover {
+  background-position: right center;
+  cursor: pointer;
+  transition: background-position 0.5s ease; /* Add transition for background-position */
+}
+
+.submitButton .redirecter button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0 5px;
+  text-decoration: underline;
+  transition: background-color 0.3s ease, border 0.3s ease, padding 0.3s ease, text-decoration 0.3s ease; /* Add transitions for background-color, border, padding, and text-decoration */
+}
+
+@media screen and (max-width: 730px) {
+  .login .container {
+    width: 440px;
+    transition: width 0.3s ease; /* Add transition for width */
+  }
+}
+
+@media screen and (max-width: 495px) {
+  .login .container {
+    width: 85%;
+    transition: width 0.3s ease; /* Add transition for width */
+  }
+
+  .login .container .formContainer .credential {
+    font-size: 18px;
+    transition: font-size 0.3s ease; /* Add transition for font-size */
+  }
+
+  .login .container .formContainer .password {
+    font-size: 18px;
+    transition: font-size 0.3s ease; /* Add transition for font-size */
+  }
+}
+
+@media screen and (max-width: 418px) {
+  .login .container .formContainer .credential input {
+    width: 150px;
+    transition: width 0.3s ease; /* Add transition for width */
+  }
+
+  .login .container .formContainer .password input {
+    width: 150px;
+    transition: width 0.3s ease; /* Add transition for width */
+  }
+}
+
+@media screen and (max-width: 393px) {
+  .login .container .formContainer .credential input {
+    width: 130px;
+    font-size: 13px;
+    transition: width 0.3s ease, font-size 0.3s ease; /* Add transitions for width and font-size */
+  }
+
+  .login .container .formContainer .password input {
+    width: 130px;
+    font-size: 13px;
+    transition: width 0.3s ease, font-size 0.3s ease; /* Add transitions for width and font-size */
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .login .container .formContainer .credential {
+    font-size: 16px;
+    transition: font-size 0.3s ease; /* Add transition for font-size */
+  }
+
+  .login .container .formContainer .password {
+    font-size: 16px;
+    transition: font-size 0.3s ease; /* Add transition for font-size */
+  }
+}
